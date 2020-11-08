@@ -24,7 +24,7 @@ export default function getBacklinksBlock(
       is(node, {
         type: "heading",
         depth: 2
-      }) && is((node as MDAST.Heading).children[0], { value: "Backlinks" })
+      }) && is((node as MDAST.Heading).children[0], { value: "Linked References" })
   );
   if (existingBacklinksNodeIndex === -1) {
     const insertionPoint =

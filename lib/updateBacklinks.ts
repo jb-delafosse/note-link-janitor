@@ -73,16 +73,16 @@ export default function updateBacklinks(
         }
       ]
     };
-    backlinksString = `## Backlinks\n${backlinks
+    backlinksString = `## Linked References\n\n${backlinks
       .map(
         entry =>
           `* [[${entry.sourceTitle}]]\n${entry.context
             .map(
-              block => `\t* ${processor.stringify(block).replace(/\n.+/, "")}\n`
+              block => `    * ${processor.stringify(block).replace(/\n.+/, "")}\n`
             )
             .join("")}`
       )
-      .join("")}\n`;
+      .join("")}`;
   }
 
   const newNoteContents =
