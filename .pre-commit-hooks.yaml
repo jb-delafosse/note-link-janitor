@@ -1,0 +1,6 @@
+-   id: note-link-janitor
+    name: note-link-janitor
+    description: "Create Backlinks at the end of every markdown files"
+    entry: note-link-janitor
+    language: node
+
