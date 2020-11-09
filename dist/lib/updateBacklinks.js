@@ -59,7 +59,7 @@ function updateBacklinks(tree, noteContents, backlinks) {
                 }
             ]
         };
-        backlinksString = `## Linked References\n\n${backlinks
+        backlinksString = `\n## Linked References\n\n${backlinks
             .map(entry => `* [[${entry.sourceTitle}]]\n${entry.context
             .map(block => `    * ${processor_1.default.stringify(block).replace(/\n.+/, "")}\n`)
             .join("")}`)
