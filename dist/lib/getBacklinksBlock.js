@@ -24,7 +24,7 @@ function getBacklinksBlock(tree) {
             null;
         return {
             isPresent: true,
-            start: tree.children[existingBacklinksNodeIndex],
+            start: tree.children[existingBacklinksNodeIndex - 1],
             until: followingNode
         };
     }
