@@ -73,7 +73,8 @@ export default function updateBacklinks(
         }
       ]
     };
-    backlinksString = `\n## Linked References\n\n${backlinks
+    var optionalNewLine = ((backlinksInfo.isPresent) ? "" : "\n");
+    backlinksString = `${optionalNewLine}## Linked References\n\n${backlinks
       .map(
         entry =>
           `* [[${entry.sourceTitle}]]\n${entry.context
@@ -84,7 +85,6 @@ export default function updateBacklinks(
       )
       .join("")}`;
   }
-
   const newNoteContents =
     noteContents.slice(0, insertionOffset) +
     backlinksString +

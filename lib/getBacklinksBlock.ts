@@ -41,7 +41,7 @@ export default function getBacklinksBlock(
       null;
     return {
       isPresent: true,
-      start: tree.children[existingBacklinksNodeIndex-1],
+      start: tree.children[existingBacklinksNodeIndex],
       until: followingNode
     };
   }
